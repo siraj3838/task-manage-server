@@ -30,7 +30,7 @@ async function run() {
         // userCollection
         app.post('/users', async (req, res) => {
             const user = req.body;
-            // unique one email one time
+            // unique one email 
             const query = { email: user.email }
             const existingUser = await userCollection.findOne(query);
             if (existingUser) {
